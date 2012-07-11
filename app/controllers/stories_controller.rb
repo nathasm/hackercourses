@@ -1,4 +1,8 @@
 class StoriesController < ApplicationController
+
+  def index
+  end
+
   def new 
     @story = Story.new
   end
@@ -16,6 +20,10 @@ class StoriesController < ApplicationController
 
   def latest
     @stories = Story.latest
+  end
+
+  def show
+    @story = Story.find(params[:id])
   end
 
   def edit

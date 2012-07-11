@@ -1,7 +1,7 @@
 Hackercourses::Application.routes.draw do
-  resources :stories
-
-  resources :comments
+  resources :stories do
+    resources :comments
+  end
 
   devise_for :users
 

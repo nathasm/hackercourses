@@ -1,6 +1,8 @@
 class StoriesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :latest]
 
   def index
+    puts can? :update, Story.last
     @stories = Story.limit(50).all
   end
 
@@ -10,6 +12,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(params[:story])
+    @story.user = current_user
     respond_to do |format|
       if @story.save
         format.html { redirect_to root_path, notice: 'Successfully submitted course' }

@@ -4,6 +4,7 @@ gem 'thin'
 gem 'rails', '3.2.3'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem 'cancan'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

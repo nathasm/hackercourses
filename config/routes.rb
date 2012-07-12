@@ -1,6 +1,10 @@
 Hackercourses::Application.routes.draw do
   resources :stories do
     resources :comments
+    member do
+      post 'up'
+      post 'down'
+    end
   end
 
   devise_for :users

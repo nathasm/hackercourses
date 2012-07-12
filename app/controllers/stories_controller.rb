@@ -1,6 +1,7 @@
 class StoriesController < ApplicationController
 
   def index
+    @stories = Story.limit(50).all
   end
 
   def new 
@@ -44,5 +45,19 @@ class StoriesController < ApplicationController
   def destroy
     Story.find(params[:id]).destroy
     redirect_to root_path, notice: 'Successfully removed course'
+  end
+
+  def up
+    @story = Story.find(params[:id])
+    up = @story.up.nil? ? 1 : @story.up + 1
+    @story.update_attribute('up', up)
+    redirect_to root_path, notice: 'Successfully voted up course'
+  end
+
+  def down
+    @story = Story.find(params[:id])
+    up = @story.down.nil? ? 1 : @story.down + 1
+    @story.update_attribute('down', down)
+    redirect_to root_path, notice: 'Successfully voted down course'
   end
 end

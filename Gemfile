@@ -5,6 +5,8 @@ gem 'rails', '3.2.3'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'cancan'
+gem 'rest-client'
+gem 'rspec'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -61,6 +61,7 @@ Hackercourses::Application.routes.draw do
   root :to => 'stories#index'
   match '/submit', to: 'stories#new'
   match '/latest', to: 'stories#latest'
+  match '/profile', to: 'profile#show'
 
   # See how all your routes lay out with "rake routes"
 

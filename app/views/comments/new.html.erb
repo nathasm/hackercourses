@@ -1,0 +1,9 @@
+<h1>New Comment for <%= @story.title %></h1>
+# Because this is an embedded controller, you need to specify two
+<%= form_for [@story, @comment] do |f| %>
+  <fieldset>
+    <%= f.label :body, "Comment" %>
+    <%= f.text_area :body %>
+  </fieldset>
+  <%= f.submit "Submit" %>
+<% end %>

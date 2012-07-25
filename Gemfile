@@ -7,6 +7,8 @@ gem 'twitter-bootstrap-rails'
 gem 'cancan'
 gem 'rest-client'
 gem 'rspec'
+gem 'twitter'
+gem 'delayed_job_active_record'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

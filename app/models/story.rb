@@ -8,4 +8,8 @@ class Story < ActiveRecord::Base
   validates :body, :presence => true, :if => "url.blank?"
 
   scope :latest, :order => 'created_at desc', :limit => 50
+
+  def printing_story
+    puts "##################### #{title}"
+  end
 end
